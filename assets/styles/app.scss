@@ -122,7 +122,7 @@ body{
             height: 500px;
             border-radius: 10px;
             transition: all 0.3s;
-            background-color: #69acbe;
+            background-color: #246d93;
             display: flex;
             align-items: center;
             justify-items: center;
@@ -141,7 +141,7 @@ body{
         .card-item:hover{
             position: relative;
             transition: all 0.3s;
-            background-color:#375963;
+            background-color:rgb(39, 61, 68);
             transform: scale(1.1, 1.1);
             display: flex;
             align-items: center;
@@ -195,7 +195,7 @@ body{
         flex-direction: column;
         justify-content: center;
         gap: 50px;
-        overflow-y: scroll;
+        overflow-y: hidden;
         span{
             font-family: Dacherry, Arial, Helvetica, sans-serif;
             text-shadow: 2px 2px #558abba3;
