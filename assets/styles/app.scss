@@ -1,0 +1,301 @@
+@import '~kursor/dist/kursor.css';
+@import "~bootstrap/scss/bootstrap";
+@font-face {
+    font-family: "Dacherry";
+    src: url("../fonts/Dacherry/Dacherry.ttf");
+}
+
+@font-face {
+    font-family: "RedHand";
+    src: url("../fonts/KGRedHand/KGRedHands.ttf");
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+
+// HEADER
+.bgcolor{
+    background-color: rgba(0, 0, 0, 0.335);
+
+    .container-fluid .navbar-brand{
+        padding: 0px;
+        margin: 0px;
+        .texto_inside{
+            font-family: Dacherry, Arial, Helvetica, sans-serif;
+            text-shadow: 2px 2px #558abba3;
+            font-weight: normal;
+            font-size: 3rem;
+            color: white;
+        }
+    }
+}
+
+// ESCENA DEL FONDO
+.contenido {
+    max-width: 100%;
+    height:600;
+    background: linear-gradient(0deg, rgba(28,28,27,1) 48%, rgba(12,146,219,1) 100%);
+    // FONDO DEL PROYECTO
+    .primera{
+        filter: blur(3px);
+    }
+    .segunda{
+        filter: blur(1px);
+    }
+
+    #scene{
+        position: relative;
+        width: auto;
+        height: 100%;
+        overflow: hidden;
+
+        .images{
+            position: absolute;
+            width:100%;
+            min-height: auto;
+        }
+
+        .texto{
+            position: relative;
+            display: flex;
+            font-family: Dacherry, Arial, Helvetica, sans-serif;
+            text-shadow: 2px 2px #558abba3;
+            font-weight: normal;
+            font-size: 3rem;
+            color: white;
+            width: 100%;
+            height: 100%;
+            right: 0px;
+            justify-content: center;
+
+            p{
+                position: absolute;
+                text-align: center;
+                right: 0px;
+                top: 25%;
+                width: 30%;
+            }
+        }
+    }
+    #scene:hover{
+        background-color: aqua;
+    }
+}
+
+//  SEGUNDA SECCION
+.lenguajes{
+    height: 700px;
+    width: 100%;
+    background-color: #1c1c1b;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    span{
+        text-align: center;
+        font-family: Dacherry, Arial, Helvetica, sans-serif;
+        text-shadow: 2px 2px #558abba3;
+        font-weight: normal;
+        font-size: 3rem;
+        color: white;
+    }
+
+    .seccion-lenguajes{
+        height: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 30px;
+
+        .card-item{
+            position: relative;
+            width: 300px;
+            height: 500px;
+            border-radius: 10px;
+            transition: all 0.3s;
+            background-color: #69acbe;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+
+            .logo{
+                width: 100%;
+                transition: all 0.3s;
+                // transform: rotate(-1turn);
+            }
+
+            .readMore{
+                opacity: 0;
+            }
+        }
+
+        .card-item:hover{
+            position: relative;
+            transition: all 0.3s;
+            background-color:#375963;
+            transform: scale(1.1, 1.1);
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            box-shadow: 0px 0px 50px 0px rgba(255,255,255,0.5);
+
+
+            .logo{
+                transition: all 0.3s;
+                filter: blur(4px);
+                transform: rotate(1turn) scale(0.5,0.5);
+            }
+
+            .readMore{
+                position: absolute;
+                height: 150px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 1;
+                .url{
+                    transition: all 0.3s;
+                    text-align: center;
+                    font-family: Dacherry, Arial, Helvetica, sans-serif;
+                    text-shadow: 0px 0px 5px #0e0e0ebf;
+                    font-weight: normal;
+                    font-size: 50px;
+                    color: white
+                }
+            }
+        }
+    }
+}
+
+// TERCERA SECCION
+.visMis{
+    position: relative;
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    flex-direction: row;
+    height: 700px;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(78,188,248,1) 0%, rgba(28,28,27,1) 80%);
+
+
+    .mis, .vis{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        overflow-y: scroll;
+        span{
+            font-family: Dacherry, Arial, Helvetica, sans-serif;
+            text-shadow: 2px 2px #558abba3;
+            font-weight: normal;
+            font-size: 3rem;
+            color: white;
+        }
+        p{
+            font-family: RedHand, Arial, Helvetica, sans-serif;
+            font-size: 1.2rem;
+            text-align: justify;
+            margin: 0px 30px;
+            max-width: 550px;
+            max-height: 400px;
+            color: white;
+        }
+    }
+
+    .air{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: url(https://1.bp.blogspot.com/-xQUc-TovqDk/XdxogmMqIRI/AAAAAAAACvI/AizpnE509UMGBcTiLJ58BC6iViPYGYQfQCLcBGAsYHQ/s1600/wave.png);
+        background-size: 1000px 100px
+    }
+
+    .air.air1{
+        animation: wave 30s linear infinite;
+        z-index: 1000;
+        opacity: 1;
+        animation-delay: 0s;
+        bottom: 0;
+    }
+
+    .air.air2{
+        animation: wave2 15s linear infinite;
+        z-index: 999;
+        opacity: 0.5;
+        animation-delay: -5s;
+        bottom: 10px;
+    }
+    .air.air3{
+        animation: wave 30s linear infinite;
+        z-index: 998;
+        opacity: 0.2;
+        animation-delay: -2s;
+        bottom: 15px;
+        }
+    .air.air4{
+        animation: wave2 5s linear infinite;
+        z-index: 997;
+        opacity: 0.7;
+        animation-delay: -5s;
+        bottom: 20px;
+        }
+    @keyframes wave{
+        0%{
+            background-position-x: 0px;
+        }
+        100%{
+            background-position-x: 1000px;
+        }
+        }
+    @keyframes wave2{
+        0%{
+            background-position-x: 0px;
+        }
+        100%{
+            background-position-x: -1000px;
+        }
+    }
+}
+
+// FOOTER
+#footer{
+    width: 100%;
+    height: 300px;
+    .redes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5rem;
+        gap: 30px;
+        height: 100%;
+        .item-red{
+            color:black;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+        }
+
+        .item-red:hover{
+            transition: all 0.3s;
+            background-color: black;
+            color: white;
+        }
+    }
+}

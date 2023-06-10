@@ -5,12 +5,56 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
         {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {% block header %}
+            <nav class="navbar navbar-expand-lg fixed-top navbar-dark bgcolor">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <div class="texto_inside">
+                            <span>ProgPalace</span>
+                        </div>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        {# <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            </li>
+                        </ul> #}
+                    </div>
+                </div>
+            </nav>
+        {% endblock %}
+        {% block main %}{% endblock %}
+        {% block footer %}
+            <footer id="footer">
+                <div class="redes">
+                    <a href="" class="item-red" data-bs-toggle="popover" data-bs-trigger="hover focus" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="" class="item-red" data-bs-toggle="popover" data-bs-trigger="hover focus" title="Faceboock"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="" class="item-red" data-bs-toggle="popover" data-bs-trigger="hover focus" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="" class="item-red" data-bs-toggle="popover" data-bs-trigger="hover focus" title="Pinterest">
+                        <i class="fa-brands fa-pinterest"></i>
+                    </a>
+                </div>
+            </footer>
+        {% endblock %}
     </body>
 </html>
