@@ -10,7 +10,7 @@
     src: url("../fonts/KGRedHand/KGRedHands.ttf");
 }
 
-html, body {
+html, body{
     height: 100vh;
     width: 100vw;
     margin: 0;
@@ -23,17 +23,42 @@ body{
 
 // HEADER
 .bgcolor{
-    background-color: rgba(0, 0, 0, 0.335);
+    background-color: rgba(0, 0, 0, 0.5);
+    .container-fluid{
+        .navbar-brand{
+            padding: 0px;
+            margin: 0px;
+            .texto_inside{
+                font-family: Dacherry, Arial, Helvetica, sans-serif;
+                text-shadow: 2px 2px #558abba3;
+                font-weight: normal;
+                font-size: 3rem;
+                color: white;
+            }
+        }
+        #navbarNav{
+            .navbar-nav{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-left: 30px;
+                font-family: RedHand, Arial, Helvetica, sans-serif;
+                font-weight: normal;
+                font-size: 1.25rem;
+                color: white;
 
-    .container-fluid .navbar-brand{
-        padding: 0px;
-        margin: 0px;
-        .texto_inside{
-            font-family: Dacherry, Arial, Helvetica, sans-serif;
-            text-shadow: 2px 2px #558abba3;
-            font-weight: normal;
-            font-size: 3rem;
-            color: white;
+                .nav-item a span{
+                    text-shadow: #000 1px 0 10px;
+                    opacity: 1;
+                }
+
+                .nav-item a:hover{
+                    text-decoration: underline;
+                    transition: 0.3s;
+                    transform: scale(1.1,1.1);
+                }
+
+            }
         }
     }
 }

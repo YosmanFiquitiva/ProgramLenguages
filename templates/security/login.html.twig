@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+{% block header %}{% endblock %}
+{% block main %}
+
+<div class="login">
+    <div id="scene"></div>
+    <div class="imagen">
+        <img src="{{asset('images/Recurso 3.svg')}}" alt="">
+    </div>
+    <div class="form">
+        <form class="form-back" method="POST">
+|           <h1>ProgPalace</h1>
+            {% if error %}
+                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+            <label for="inputUsername">Usuario</label>
+            <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" autocomplete="username" required autofocus>
+            <label for="inputPassword">Contraseña</label>
+            <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+            <button class="btn btn-primary" type="submit">
+                INGRESAR
+            </button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
+{% block footer %}
+{% endblock %}

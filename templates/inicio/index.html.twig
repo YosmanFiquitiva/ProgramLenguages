@@ -1,63 +1,58 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello InicioController!
-{% endblock %}
-
 {% block main %}
-    <div class="all">
-        <div class="contenido">
-            <div id="scene" data-relative-input="true" data-invert-x="false" data-invert-y="false" data-hover-only="true" data-clip-relative-input="true">
-                <img class="images primera" data-depth="0.1" src="{{asset("images/Grafico Izquierda.png")}}" alt="">
-                <img class="images segunda" data-depth="0.2" src="{{asset("images/Graficos alrededor.png")}}" alt="">
-                <img class="images" data-depth="0.65" src="{{asset("images/Persona.png")}}" alt="">
-                <img class="images" data-depth="0.6" src="{{asset("images/Escritorio.png")}}" alt="">
+    <div class="contenido">
+        <div id="scene" data-relative-input="true" data-invert-x="false" data-invert-y="false" data-clip-relative-input="true">
+            <img class="images primera" data-depth="0.1" src="{{asset("images/Grafico Izquierda.png")}}" alt="">
+            <img class="images segunda" data-depth="0.2" src="{{asset("images/Graficos alrededor.png")}}" alt="">
+            <img class="images" data-depth="0.65" src="{{asset("images/Persona.png")}}" alt="">
+            <img class="images" data-depth="0.6" src="{{asset("images/Escritorio.png")}}" alt="">
 
-                <div class="texto" data-depth="1">
-                    <p>"Donde los programadores reinan"</p>
+            <div class="texto" data-depth="1">
+                <p>"Donde los programadores reinan"</p>
+            </div>
+        </div>
+        <section class="lenguajes">
+            <span>Algunos Lenguajes</span>
+            <div class="seccion-lenguajes">
+                <div class="card-item">
+                    <img class="logo" src="{{asset("images/Logos/HTML5_Logo.svg")}}" alt="">
+                    <div class="readMore">
+                        <a class="url" href="">VER...</a>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img class="logo" src="{{asset("images/Logos/HTML5_Logo.svg")}}" alt="">
+                    <div class="readMore">
+                        <a class="url" href="">VER...</a>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img class="logo" src="{{asset("images/Logos/HTML5_Logo.svg")}}" alt="">
+                    <div class="readMore">
+                        <a class="url" href="">VER...</a>
+                    </div>
                 </div>
             </div>
-            <section class="lenguajes">
-                <span>Algunos Lenguajes</span>
-                <div class="seccion-lenguajes">
-                    <div class="card-item">
-                        <img class="logo" src="{{asset("images/Logos/HTML5_Logo.svg")}}" alt="">
-                        <div class="readMore">
-                            <a class="url" href="">VER...</a>
-                        </div>
-                    </div>
-                    <div class="card-item">
-                        <img class="logo" src="{{asset("images/Logos/HTML5_Logo.svg")}}" alt="">
-                        <div class="readMore">
-                            <a class="url" href="">VER...</a>
-                        </div>
-                    </div>
-                    <div class="card-item">
-                        <img class="logo" src="{{asset("images/Logos/HTML5_Logo.svg")}}" alt="">
-                        <div class="readMore">
-                            <a class="url" href="">VER...</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="visMis">
-                <div class="mis">
-                    <span>MISION</span>
-                    <p>
-                        Nuestra misión en ProgPalace es proporcionar un entorno digital acogedor y enriquecedor donde los programadores de todos los niveles puedan conectarse, aprender y crecer. Nos esforzamos por ser la plataforma de referencia en el mundo de la programación, ofreciendo recursos de calidad, tutoriales, comunidad activa y herramientas innovadoras para empoderar a nuestros miembros y ayudarles a alcanzar su máximo potencial como profesionales de la programación.
-                    </p>
-                </div>
-                <div class="vis">
-                    <span>VISION</span>
-                    <p>
-                        Nuestra visión en ProgPalace es construir un palacio virtual donde los amantes de la programación encuentren un hogar digital inspirador. Nos esforzamos por ser el destino preferido de los programadores de todo el mundo, proporcionando una experiencia única y satisfactoria. Buscamos fomentar la colaboración, el intercambio de conocimientos y el crecimiento personal en un entorno inclusivo y respetuoso. Con nuestra visión, aspiramos a ser un catalizador para la innovación tecnológica y una fuente de inspiración para la próxima generación de talentosos programadores.
-                    </p>
-                </div>
-                <div class='air air1'></div>
-                <div class='air air2'></div>
-                <div class='air air3'></div>
-                <div class='air air4'></div>
-            </section>
-        </div>
+        </section>
+        <section class="visMis">
+            <div class="mis">
+                <span>MISION</span>
+                <p>
+                    Nuestra misión en ProgPalace es proporcionar un entorno digital acogedor y enriquecedor donde los programadores de todos los niveles puedan conectarse, aprender y crecer. Nos esforzamos por ser la plataforma de referencia en el mundo de la programación, ofreciendo recursos de calidad, tutoriales, comunidad activa y herramientas innovadoras para empoderar a nuestros miembros y ayudarles a alcanzar su máximo potencial como profesionales de la programación.
+                </p>
+            </div>
+            <div class="vis">
+                <span>VISION</span>
+                <p>
+                    Nuestra visión en ProgPalace es construir un palacio virtual donde los amantes de la programación encuentren un hogar digital inspirador. Nos esforzamos por ser el destino preferido de los programadores de todo el mundo, proporcionando una experiencia única y satisfactoria. Buscamos fomentar la colaboración, el intercambio de conocimientos y el crecimiento personal en un entorno inclusivo y respetuoso. Con nuestra visión, aspiramos a ser un catalizador para la innovación tecnológica y una fuente de inspiración para la próxima generación de talentosos programadores.
+                </p>
+            </div>
+            <div class='air air1'></div>
+            <div class='air air2'></div>
+            <div class='air air3'></div>
+            <div class='air air4'></div>
+        </section>
     </div>
 
 {% endblock %}

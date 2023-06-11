@@ -11,8 +11,12 @@ class InicioController extends AbstractController
     #[Route('/', name: 'app_inicio')]
     public function index(): Response
     {
-        return $this->render('inicio/index.html.twig', [
-            'controller_name' => 'InicioController',
-        ]);
+        return $this->render('inicio/index.html.twig');
+    }
+
+    #[Route('/lenguajes', name: 'app_lenguajes')]
+    public function lenguajes(): Response
+    {
+        return $this->render('inicio/lenguajes.html.twig');
     }
 }
