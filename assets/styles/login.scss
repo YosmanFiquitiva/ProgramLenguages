@@ -1,16 +1,18 @@
 .login{
     position: relative;
     width: 100%;
-    height: auto;
+    height: 100%;
     overflow: hidden;
 
     .imagen{
-        max-height: 100vh;
+        min-height: 100%;
+        overflow: hidden;
         >img{
-            max-width: 101%;
-            height: 100%;
-            margin:-5px;
-            margin-top: -150px;
+            width: 102%;
+            bottom: 0px;
+            margin-left: -10px;
+            margin-top: -10px;
+            max-height: 100%;
         }
     }
     .form{
@@ -53,7 +55,6 @@
                 text-align: center;
                 width: 400px;
                 height: 30px;
-
             }
             label{
                 font-family: RedHand, Arial, Helvetica, sans-serif;

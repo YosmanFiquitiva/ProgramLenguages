@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+    <div class="lenguajesespe">
+        <div class="content">
+            <h1 class="tittle">{{resultado.titulo}}</h1>
+            <img src="{{asset('uploads/images/'~resultado.imagen)}}" alt="">
+            <p class="description">{{resultado.descripcion}}</p>
+            <a href="{{resultado.urlDoc}}" class="documentacion" style="color: {{resultado.color}}">{{resultado.urlDoc}}</a>
+        </div>
+    </div>
+{% endblock %}

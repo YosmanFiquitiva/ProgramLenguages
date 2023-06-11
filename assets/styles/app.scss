@@ -124,7 +124,7 @@ body{
     justify-content: center;
     flex-direction: column;
 
-    span{
+    >span{
         text-align: center;
         font-family: Dacherry, Arial, Helvetica, sans-serif;
         text-shadow: 2px 2px #558abba3;
@@ -147,18 +147,21 @@ body{
             height: 500px;
             border-radius: 10px;
             transition: all 0.3s;
-            background-color: #246d93;
+            background-color: whitesmoke;
             display: flex;
             align-items: center;
-            justify-items: center;
+            justify-content: center;
 
             .logo{
                 width: 100%;
+                padding: 25px;
+                overflow: hidden;
                 transition: all 0.3s;
                 // transform: rotate(-1turn);
             }
 
             .readMore{
+                position: absolute;
                 opacity: 0;
             }
         }
@@ -166,7 +169,7 @@ body{
         .card-item:hover{
             position: relative;
             transition: all 0.3s;
-            background-color:rgb(39, 61, 68);
+            background-color:rgb(139, 139, 139);
             transform: scale(1.1, 1.1);
             display: flex;
             align-items: center;

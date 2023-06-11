@@ -1,5 +1,6 @@
 import './styles/app.scss';
 import './styles/lenguajes.scss';
+import './styles/lenguajesespe.scss'
 import './styles/login.scss';
 import Parallax from 'parallax-js';
 import kursor from 'kursor';

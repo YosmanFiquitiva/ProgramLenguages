@@ -14,17 +14,40 @@
 
         .card{
             width: 20rem;
+            .card-img-top{
+                height: 300px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 30px;
+                img{
+                    max-height: 100%;
+                    max-width: 100%;
+                }
+                img:hover{
+                    transform: scale(1.1,1.1);
+                    transition: 0.3s;
+                }
+            }
             .card-body{
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
+                font-family: RedHand, Arial, Helvetica, sans-serif;
+                text-align: center;
 
                 .card-title{
                     font-size: 1.5rem;
+                    color: black;
                 }
                 .card-text{
-                    text-align: justify;
+                    text-overflow: ellipsis;
+                    height: 6rem;
+                    overflow: hidden;
+                    font-family: RedHand, Arial, Helvetica, sans-serif;
+                    text-align: center;
+                    margin-bottom: 0px;
                 }
 
                 .button-48 {
@@ -84,6 +107,7 @@
 
                 .button-48 span {
                     z-index: 1;
+                    font-family: RedHand, Arial, Helvetica, sans-serif;
                     position: relative;
                 }
             }

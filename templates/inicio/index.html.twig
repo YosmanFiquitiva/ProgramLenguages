@@ -2,7 +2,7 @@
 
 {% block main %}
     <div class="contenido">
-        <div id="scene" data-relative-input="true" data-invert-x="false" data-invert-y="false" data-clip-relative-input="true">
+        <div id="scene" data-relative-input="true" data-invert-x="false" data-invert-y="false" data-clip-relative-input="true" data-hover-only="true">
             <img class="images primera" data-depth="0.1" src="{{asset("images/Grafico Izquierda.png")}}" alt="">
             <img class="images segunda" data-depth="0.2" src="{{asset("images/Graficos alrededor.png")}}" alt="">
             <img class="images" data-depth="0.65" src="{{asset("images/Persona.png")}}" alt="">
@@ -15,35 +15,25 @@
         <section class="lenguajes">
             <span>Algunos Lenguajes</span>
             <div class="seccion-lenguajes">
-                <div class="card-item">
-                    <img class="logo" src="{{asset("images/Logos/HTML5_Logo.svg")}}" alt="">
+                {% for resultado in resultados %}
+                    <div class="card-item">
+                    <img class="logo" src="{{asset("uploads/images/"~resultado.imagen)}}" alt="">
                     <div class="readMore">
-                        <a class="url" href="">VER...</a>
+                        <a class="url" href="{{path('app_lenguajes')}}">VER...</a>
                     </div>
                 </div>
-                <div class="card-item">
-                    <img class="logo" src="{{asset("images/Logos/HTML5_Logo.svg")}}" alt="">
-                    <div class="readMore">
-                        <a class="url" href="">VER...</a>
-                    </div>
-                </div>
-                <div class="card-item">
-                    <img class="logo" src="{{asset("images/Logos/HTML5_Logo.svg")}}" alt="">
-                    <div class="readMore">
-                        <a class="url" href="">VER...</a>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </section>
         <section class="visMis">
             <div class="mis">
-                <span>MISION</span>
+                <span>MISIÓN</span>
                 <p>
                     Nuestra misión en ProgPalace es proporcionar un entorno digital acogedor y enriquecedor donde los programadores de todos los niveles puedan conectarse, aprender y crecer. Nos esforzamos por ser la plataforma de referencia en el mundo de la programación, ofreciendo recursos de calidad, tutoriales, comunidad activa y herramientas innovadoras para empoderar a nuestros miembros y ayudarles a alcanzar su máximo potencial como profesionales de la programación.
                 </p>
             </div>
             <div class="vis">
-                <span>VISION</span>
+                <span>VISIÓN</span>
                 <p>
                     Nuestra visión en ProgPalace es construir un palacio virtual donde los amantes de la programación encuentren un hogar digital inspirador. Nos esforzamos por ser el destino preferido de los programadores de todo el mundo, proporcionando una experiencia única y satisfactoria. Buscamos fomentar la colaboración, el intercambio de conocimientos y el crecimiento personal en un entorno inclusivo y respetuoso. Con nuestra visión, aspiramos a ser un catalizador para la innovación tecnológica y una fuente de inspiración para la próxima generación de talentosos programadores.
                 </p>

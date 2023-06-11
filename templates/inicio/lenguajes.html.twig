@@ -3,78 +3,18 @@
 {% block main %}
     <div class="lenguajesProg">
         <div class="cards">
-            <div class="card">
-                <img class="card-img-top" src="{{asset('images/logos/CSS-Logo-PNG.png')}}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a class="button-48" href="#" role="button"><span class="text">Go somewhere</span></a>
+            {% for resultado in resultados %}
+                <div class="card">
+                    <div class="card-img-top">
+                        <img class="img-fluid" src="{{asset("uploads/images/"~resultado.imagen)}}" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{resultado.titulo}}</h5>
+                        <p class="card-text">{{resultado.descripcion}}</p><span>...</span>
+                        <a class="button-48" href="{{path('app_lenguajesexpe',{"id" :resultado.id})}}" role="button" style="background:{{resultado.color}}"><span class="text">ver...</span></a>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="{{asset('images/logos/CSS-Logo-PNG.png')}}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a class="button-48" href="#" role="button"><span class="text">Go somewhere</span></a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="{{asset('images/logos/CSS-Logo-PNG.png')}}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a class="button-48" href="#" role="button"><span class="text">Go somewhere</span></a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="{{asset('images/logos/CSS-Logo-PNG.png')}}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a class="button-48" href="#" role="button"><span class="text">Go somewhere</span></a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="{{asset('images/logos/CSS-Logo-PNG.png')}}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a class="button-48" href="#" role="button"><span class="text">Go somewhere</span></a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="{{asset('images/logos/CSS-Logo-PNG.png')}}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a class="button-48" href="#" role="button"><span class="text">Go somewhere</span></a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="{{asset('images/logos/CSS-Logo-PNG.png')}}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a class="button-48" href="#" role="button"><span class="text">Go somewhere</span></a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="{{asset('images/logos/CSS-Logo-PNG.png')}}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a class="button-48" href="#" role="button"><span class="text">Go somewhere</span></a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="{{asset('images/logos/CSS-Logo-PNG.png')}}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a class="button-48" href="#" role="button"><span class="text">Go somewhere</span></a>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
